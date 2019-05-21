@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro_item"
+    android:orientation="vertical">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id='@+id/toolbar_registrar'
+        android:layout_height='wrap_content'
+        android:layout_width='match_parent'
+        android:minHeight='?attr/actionBarSize'
+        android:background='?attr/colorPrimary'
+        app:title="Cadastrar"
+        app:titleTextColor="@android:color/background_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".cadastroUsuario"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/arredondamento_image_button"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Nome (Obrigatório)"
+                android:drawableLeft="@drawable/name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <EditText
+                android:id="@+id/txtQtde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Quantidade"
+                android:drawableLeft="@drawable/more2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <EditText
+                android:id="@+id/txtData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Data da Compra (Obrigatório)"
+                android:inputType="date"
+                android:drawableLeft="@drawable/calendar"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:id="@+id/txtValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/coin"
+                android:hint=" Valor"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <EditText
+                android:id="@+id/txtObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Observação"
+                android:drawableLeft="@drawable/obs"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnerMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Material Design Spinner"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal" />
+
+        <CheckBox
+            android:id="@+id/checkPreferido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferido" />
+
+        <Button
+            android:id="@+id/btnGravar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:text="Gravar"
+            android:background="@drawable/arredondamento_button"
+            android:textColor="@android:color/background_light"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+</LinearLayout>
