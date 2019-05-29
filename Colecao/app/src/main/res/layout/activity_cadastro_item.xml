@@ -45,12 +45,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
+
             <EditText
                 android:id="@+id/txtQtde"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/more2"
                 android:hint=" Quantidade"
-                android:drawableLeft="@drawable/more2"/>
+                android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -89,18 +91,38 @@
                 android:drawableLeft="@drawable/obs"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        <!--<com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
             android:id="@+id/spinnerMarca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Material Design Spinner"
             android:textColorHint="#05ab9a"
-            app:met_floatingLabel="normal" />
+            app:met_floatingLabel="normal" />-->
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marca:"
+            android:textSize="18dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="match_parent"
+            android:hint="Marcas"
+            android:spinnerMode="dropdown"></Spinner>
+        </LinearLayout>
         <CheckBox
             android:id="@+id/checkPreferido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="Preferido" />
 
         <Button

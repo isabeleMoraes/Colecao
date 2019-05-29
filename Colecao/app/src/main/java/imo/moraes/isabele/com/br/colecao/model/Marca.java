@@ -2,11 +2,11 @@ package imo.moraes.isabele.com.br.colecao.model;
 
 import java.util.List;
 
-public class Marcas {
+public class Marca {
     private int id;
     private String nome;
 
-    public Marcas(int id, String nome) {
+    public Marca(int id, String nome) {
         this.id = id;
         this.nome = nome;
     }

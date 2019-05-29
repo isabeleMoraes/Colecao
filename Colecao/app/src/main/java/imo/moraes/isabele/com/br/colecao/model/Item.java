@@ -1,16 +1,19 @@
 package imo.moraes.isabele.com.br.colecao.model;
 
 import java.time.LocalDate;
+import java.util.Calendar;
 
 public abstract class Item {
+
+    private int id;
     private String nome;
     private int qtde;
-    private LocalDate dataCompra;
+    private Calendar dataCompra;
     private float valor;
     private String observacao;
     private boolean preferido;
 
-    public Item(String nome, int qtde, LocalDate dataCompra, float valor, String observacao, boolean preferido) {
+    public Item(int id, String nome, int qtde, Calendar dataCompra, float valor, String observacao, boolean preferido) {
         setNome(nome);
         setQtde(qtde);
         setDataCompra(dataCompra);
@@ -18,11 +21,13 @@ public abstract class Item {
         setObservacao(observacao);
         setPreferido(preferido);
     }
-    public Item(String nome, LocalDate dataCompra,boolean preferido) {
-        setNome(nome);
-        setQtde(1);
-        setDataCompra(dataCompra);
-        setPreferido(preferido);
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -41,11 +46,11 @@ public abstract class Item {
         this.qtde = qtde;
     }
 
-    public LocalDate getDataCompra() {
+    public Calendar getDataCompra() {
         return dataCompra;
     }
 
-    public void setDataCompra(LocalDate dataCompra) {
+    public void setDataCompra(Calendar dataCompra) {
         this.dataCompra = dataCompra;
     }
 

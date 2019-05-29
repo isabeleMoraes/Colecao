@@ -1,24 +1,22 @@
 package imo.moraes.isabele.com.br.colecao.model;
 
 import java.time.LocalDate;
+import java.util.Calendar;
 
 public class ActionFigure extends Item {
 
-    private int marca;
+    private Marca marca;
 
-    public ActionFigure(String nome, LocalDate dataCompra, boolean preferido) {
-        super(nome, dataCompra, preferido);
+    public ActionFigure(int id, String nome, int qtde, Calendar dataCompra, float valor, String observacao, boolean preferido, Marca marca) {
+        super(id, nome, qtde, dataCompra, valor, observacao, preferido);
+        this.marca = marca;
     }
 
-    public ActionFigure(String nome, int qtde, LocalDate dataCompra, float valor, String observacao, boolean preferido) {
-        super(nome, qtde, dataCompra, valor, observacao, preferido);
-    }
-
-    public int getMarca() {
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setMarca(int marca) {
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 }
